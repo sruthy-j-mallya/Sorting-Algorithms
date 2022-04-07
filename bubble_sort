@@ -1,7 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 void bubble_sort(int list[20],int list_count){
-    //Bubble sort
+    int temp;
+    for(int i=0;i<list_count-1;i++){
+        for(int j=0;j<list_count-i-1;j++){
+            if(list[j] > list[j+1]){
+                temp = list[j];
+                list[j] = list[j+1];
+                list[j+1] = temp;
+            }
+        }
+    }
 }
 void main(){
 
